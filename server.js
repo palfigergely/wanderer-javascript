@@ -1,6 +1,6 @@
 const express = require('express');
 const port = process.env.PORT || 8080;
-const host = process.env.HOST || 'localhost';
+const host = process.env.HOST || '0.0.0.0';
 const app = express();
 
 app.use(express.static(__dirname + '/img'));
