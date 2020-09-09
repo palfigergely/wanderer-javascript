@@ -1,5 +1,6 @@
 const express = require('express');
 const port = process.env.PORT || 8080;
+const host = process.env.HOST || 'localhost';
 const app = express();
 
 app.use(express.static(__dirname + '/img'));
@@ -10,6 +11,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname+'/index.html');
 });
 
-app.listen(port, 'localhost', () => {
+app.listen(port, host, () => {
   console.log(`The app is listening on port ${port}...`)
 })
